@@ -33,10 +33,13 @@ Belirtilen isme göre filtreleme yapar ve isteğe bağlı olarak sıralama yapar
 Belirtilen ID'ye sahip bir ürünü parçalı olarak günceller. İstek gövdesinde JSON Patch belgesini içermelidir.
 ### Kullanım
 Projeyi yerel olarak çalıştırmak için aşağıdaki adımları izleyebilirsiniz:
-
-Projeyi klonlayın: git clone https://github.com/kullaniciadi/RestfulApi.git
+#
+Projeyi klonlayın: git clone https://github.com/oguzhankoc55/RestfulApi.git
+#
 Projeye gidin: cd RestfulApi
+#
 Projeyi çalıştırın: dotnet run
+#
 Proje çalıştığında, yukarıda belirtilen endpoint'leri kullanarak API'ye istekler yapabilirsiniz.
 
 ### Gereksinimler
