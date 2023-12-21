@@ -31,7 +31,17 @@ Belirtilen isme göre filtreleme yapar ve isteğe bağlı olarak sıralama yapar
 ### 7. Belirli Bir Ürünü Parçalı Güncelle [PATCH /api/products/{id}]
 
 Belirtilen ID'ye sahip bir ürünü parçalı olarak günceller. İstek gövdesinde JSON Patch belgesini içermelidir.
+### Kullanım
+Projeyi yerel olarak çalıştırmak için aşağıdaki adımları izleyebilirsiniz:
 
+Projeyi klonlayın: git clone https://github.com/kullaniciadi/RestfulApi.git
+Projeye gidin: cd RestfulApi
+Projeyi çalıştırın: dotnet run
+Proje çalıştığında, yukarıda belirtilen endpoint'leri kullanarak API'ye istekler yapabilirsiniz.
+
+### Gereksinimler
+.NET Core SDK
+Bir HTTP istemcisine sahip bir araç (örneğin, cURL veya Postman)
 ## Model
 
 Ürün modeli aşağıdaki gibidir:
@@ -42,14 +52,4 @@ Belirtilen ID'ye sahip bir ürünü parçalı olarak günceller. İstek gövdesi
   "name": "Product 1",
   "price": 19.99
 }
-Kullanım
-Projeyi yerel olarak çalıştırmak için aşağıdaki adımları izleyebilirsiniz:
-
-Projeyi klonlayın: git clone https://github.com/kullaniciadi/RestfulApi.git
-Projeye gidin: cd RestfulApi
-Projeyi çalıştırın: dotnet run
-Proje çalıştığında, yukarıda belirtilen endpoint'leri kullanarak API'ye istekler yapabilirsiniz.
-
-Gereksinimler
-.NET Core SDK
-Bir HTTP istemcisine sahip bir araç (örneğin, cURL veya Postman)
+'''
