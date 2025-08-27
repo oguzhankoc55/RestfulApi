@@ -1,58 +1,66 @@
-# RESTful API - Products
+RESTful API - Products
 
-Bu proje, basit bir RESTful API'yi uygular ve ürünlerle ilgili temel CRUD (Create, Read, Update, Delete) işlemlerini gerçekleştirir. Ayrıca, ürünleri listeleyip sıralama işlevselliği de içerir.
+Bu proje, basit bir RESTful API uygulamasıdır. Ürünlerle ilgili temel CRUD (Create, Read, Update, Delete) işlemlerini gerçekleştirmenin yanı sıra ürünleri listeleme ve sıralama işlevselliği de sağlar.
 
-## Endpoints
+🔗 Endpoints
 
-### 1. Ürünleri Listele [GET /api/products]
+1. Ürünleri Listele
+   GET /api/products
+   Tüm ürünleri listeler.
 
-Tüm ürünleri listeler.
+2. Belirli Bir Ürünü Getir
+   GET /api/products/{id}
+   Belirtilen ID’ye sahip ürünü getirir.
 
-### 2. Belirli Bir Ürünü Getir [GET /api/products/{id}]
+3. Yeni Ürün Ekle
+   POST /api/products
+   Yeni bir ürün ekler.
+   İstek gövdesinde JSON formatında ürün bilgileri bulunmalıdır.
 
-Belirtilen ID'ye sahip bir ürünü getirir.
+4. Belirli Bir Ürünü Güncelle
+   PUT /api/products/{id}
+   Belirtilen ID’ye sahip ürünü günceller.
+   İstek gövdesinde güncellenmiş ürün bilgileri bulunmalıdır.
 
-### 3. Yeni Ürün Ekle [POST /api/products]
+5. Belirli Bir Ürünü Sil
+   DELETE /api/products/{id}
+   Belirtilen ID’ye sahip ürünü siler.
 
-Yeni bir ürün ekler. İstek gövdesinde JSON formatında ürün bilgilerini içermelidir.
+6. Ürünleri Listele ve Sırala
+   GET /api/products/list?name={name}&sort={sort}
+   Belirtilen isme göre filtreleme yapar ve isteğe bağlı olarak sıralama gerçekleştirir.
 
-### 4. Belirli Bir Ürünü Güncelle [PUT /api/products/{id}]
+7. Belirli Bir Ürünü Parçalı Güncelle
+   PATCH /api/products/{id}
+   Belirtilen ID’ye sahip ürünü kısmi olarak günceller.
+   İstek gövdesinde JSON Patch belgesi bulunmalıdır.
 
-Belirtilen ID'ye sahip bir ürünü günceller. İstek gövdesinde güncellenmiş ürün bilgilerini içermelidir.
+🚀 Kullanım
 
-### 5. Belirli Bir Ürünü Sil [DELETE /api/products/{id}]
+Projeyi yerel ortamda çalıştırmak için:
 
-Belirtilen ID'ye sahip bir ürünü siler.
+1. Projeyi klonlayın:
+   git clone https://github.com/oguzhankoc55/RestfulApi.git
 
-### 6. Ürünleri Listele ve Sırala [GET /api/products/list?name={name}&sort={sort}]
+2. Proje dizinine gidin:
+   cd RestfulApi
 
-Belirtilen isme göre filtreleme yapar ve isteğe bağlı olarak sıralama yapar.
+3. Projeyi çalıştırın:
+   dotnet run
 
-### 7. Belirli Bir Ürünü Parçalı Güncelle [PATCH /api/products/{id}]
+Uygulama çalıştığında yukarıdaki endpoint’ler üzerinden API’ye istek gönderebilirsiniz.
 
-Belirtilen ID'ye sahip bir ürünü parçalı olarak günceller. İstek gövdesinde JSON Patch belgesini içermelidir.
-### Kullanım
-Projeyi yerel olarak çalıştırmak için aşağıdaki adımları izleyebilirsiniz:
-#
-Projeyi klonlayın: git clone https://github.com/oguzhankoc55/RestfulApi.git
-#
-Projeye gidin: cd RestfulApi
-#
-Projeyi çalıştırın: dotnet run
-#
-Proje çalıştığında, yukarıda belirtilen endpoint'leri kullanarak API'ye istekler yapabilirsiniz.
+📦 Gereksinimler
 
-### Gereksinimler
-.NET Core SDK
-Bir HTTP istemcisine sahip bir araç (örneğin, cURL veya Postman)
-## Model
+- .NET Core SDK
+- Bir HTTP istemci aracı (örn. cURL, Postman)
+
+📑 Model
 
 Ürün modeli aşağıdaki gibidir:
 
-```json
 {
   "id": 1,
   "name": "Product 1",
   "price": 19.99
 }
-'''
